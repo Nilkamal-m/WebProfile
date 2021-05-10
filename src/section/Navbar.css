@@ -1,0 +1,148 @@
+.navbar-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.navbar-component {
+  display: flex;
+  align-items: center;
+}
+
+.nav-home-icon {
+  padding: 16px;
+  background-color: #ffc500;
+  color: #ffffff;
+  font-size: 15px;
+}
+.nav-home-icon:hover {
+  background-color: #fedc2a;
+  transition: all 0.3s ease;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.nav-menu-link {
+  margin: 15px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  color: #333333;
+}
+.nav-menu-link:hover {
+  color: #337ab7;
+  transition: all 0.2 ease;
+}
+.social-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ham-bars-menu {
+  font-size: 30px;
+  display: none;
+  margin: auto 15px;
+}
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    display: none;
+  }
+  .ham-bars-menu {
+    display: flex;
+    align-items: center;
+  }
+  .main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #fff;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 0.375s;
+  }
+  .main-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+  }
+  .main-nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: #fedc2a;
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all 0.275s 0.1s;
+  }
+  .main-nav.is-open::before {
+    transform: skew(-14deg) translateX(0);
+  }
+  /* Skewing effect on menu links */
+  .main-nav ul {
+    display: inline-flex;
+    flex-direction: column;
+    height: 93%; /* Should be 100%, but we have a notice message :D */
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+  }
+
+  .main-nav li {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: right;
+    transform: skew(16deg);
+  }
+
+  /* Apparition effect on links */
+  .main-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .main-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .main-nav li:nth-child(1) a {
+    transition: all 275ms 175ms;
+  }
+  .main-nav li:nth-child(2) a {
+    transition: all 275ms 225ms;
+  }
+  .main-nav li:nth-child(3) a {
+    transition: all 275ms 275ms;
+  }
+  .main-nav li:nth-child(4) a {
+    transition: all 275ms 325ms;
+  }
+  .main-nav li:nth-child(5) a {
+    transition: all 275ms 375ms;
+  }
+  .open-main-nav {
+    position: absolute;
+    top: 15px;
+    padding-top: 20px;
+    right: 15px;
+    z-index: 1000;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  .open-main-nav:focus {
+    outline: none;
+  }
+}

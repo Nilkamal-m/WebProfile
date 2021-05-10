@@ -1,0 +1,26 @@
+.social-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.social-link {
+  margin: 0 5px;
+  color: #333333;
+  font-size: 15px;
+}
+.fb:hover {
+  color: #4267b2;
+  font-size: 18px;
+}
+.tw:hover {
+  color: #00acee;
+  font-size: 18px;
+}
+.insta:hover {
+  columns: #e1306c;
+  font-size: 18px;
+}
+.git:hover {
+  color: #f34f29;
+  font-size: 18px;
+}

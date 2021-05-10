@@ -1,0 +1,119 @@
+.home-main-cont {
+  margin: 20px;
+}
+.home-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 0;
+  /* background-color: #fafafa; */
+}
+.profile-info {
+  list-style: none;
+  margin: 60px 0px 8px -20px;
+}
+.profile-info li {
+  border-left: solid 2px #eee;
+  padding: 0 0 23px 20px;
+  font-size: 14px;
+  color: #787878;
+}
+.profile-info li:first-child {
+  padding-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+.profile-info li:first-child::before {
+  content: "";
+  margin-left: -51px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  position: relative;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  padding: 11px 14px;
+  box-shadow: 0px 2px 32px 0px rgba(4, 123, 248, 0.3);
+  background-color: #ffc500;
+}
+.profile-info li::before {
+  border-color: #ffb100 !important;
+  content: "";
+  border: solid 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50px;
+  font-size: 8px;
+  margin-left: -25px;
+  margin-top: 7px;
+  background: #fff;
+  display: block;
+  position: absolute;
+}
+.profile-info li:first-child::after {
+  background: url(../asset/img/glasses.png) no-repeat;
+  background-size: 27px 10px;
+  content: "";
+  width: 30px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px -15px;
+}
+.profile-info li:p {
+  line-height: 10px;
+}
+.btn {
+  color: #fff;
+  background: #ffc500;
+  padding: 10px 15px;
+  border-radius: 16px;
+  border: none;
+  margin: 60px 0 20px 0;
+}
+.btn i {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-main-cont {
+    margin: 20px 8px;
+  }
+}
+
+/* ------------------------ Right Side ---------------- */
+
+.right-paper-cont {
+  padding: 30px 20px;
+}
+.title-head {
+  position: relative;
+  display: inline-block;
+  padding: 0 3px;
+  margin: 20px 0;
+}
+.title-head span {
+  background-color: #ffb100;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  bottom: 20%;
+  opacity: 0.3;
+  left: 0;
+}
+.paper-service {
+  padding: 40px 20px;
+  background-color: #fafafa;
+  left: 0;
+  right: 0;
+}
+.skills-cont {
+  padding: 20px;
+}
+/* ..................................... */
+
+.progress-bar {
+  margin: 15px 5px;
+}
