@@ -11,7 +11,7 @@ export const Portfolio = () => {
           <span></span>
           <Typography variant="h5">PortFolio</Typography>
         </div>
-        <Grid container wrap="nowrap">
+        <Grid container>
           <Grid item xs={12} sm={4}>
             <Skeleton variant="rect" width={210} height={118} />
             <Box pt={0.5}>
@@ -26,7 +26,7 @@ export const Portfolio = () => {
               <Skeleton width="60%" />
             </Box>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid xs={12} sm={4}>
             <Skeleton variant="rect" width={210} height={118} />
             <Box pt={0.5}>
               <Skeleton width={210} />
