@@ -2,12 +2,14 @@ import React from "react";
 import { Card, CardContent, Grid, Paper, Typography } from "@material-ui/core";
 import "./Home.css";
 import Propic from "../asset/img/propic.jpg";
+import Cv from "../asset/pdf/NilkamalMahatoResume.pdf";
 import { Home } from "./Home";
 import { Resume } from "./Resume";
 import { Portfolio } from "./Portfolio";
 import { Blog } from "./Blog";
 import { Contact } from "./Contact";
 import { Switch, Route, Router } from "react-router-dom";
+import FileSaver from "file-saver";
 
 const ProfileInfo = [
   {
@@ -33,6 +35,10 @@ const ProfileInfo = [
 ];
 
 const LandingPage = () => {
+  const saveFile = () => {
+    FileSaver.saveAs(`${Cv}`, "NilkamalMahatoResume.pdf");
+  };
+
   return (
     <div className="home-main-cont">
       <Grid container spacing={3}>
@@ -58,7 +64,7 @@ const LandingPage = () => {
                 </li>
               ))}
             </ul>
-            <button className="btn">
+            <button className="btn" onClick={saveFile}>
               Download Cv<i class="fas fa-cloud-download-alt"></i>
             </button>
           </Paper>

@@ -36,23 +36,29 @@ export const Home = () => {
           <span></span>
           <Typography variant="h5">About</Typography>
         </div>
-        <Typography gutterBottom component="h6">
-          Started earnest brother believe an exposed so. Me he believing
+        <Typography gutterBottom component="h6" paragraph>
+          {/* Started earnest brother believe an exposed so. Me he believing
           daughters if forfeited at furniture. Age again and stuff downs spoke.
           Late hour new nay able fat each sell. Nor themselves age introduced
           frequently use unsatiable devonshire get. They why quit gay cold rose
           deal park. One same they four did ask busy. Reserved opinions fat him
           nay position. Breakfast as zealously incommode do agreeable furniture.
-          One too nay led fanny allow plate.
+          One too nay led fanny allow plate. */}
+          Hello, my name is Nilkamal Mahato.
         </Typography>
         <Typography component="h6">
-          Quick six blind smart out burst. Perfectly on furniture dejection
+          {/* Quick six blind smart out burst. Perfectly on furniture dejection
           determine my depending an to. Add short water court fat. Her bachelor
           honoured perceive securing but desirous ham required. Questions
           deficient acuteness to engrossed as. Entirely led ten humoured
           greatest and yourself. Besides ye country on observe. She continue
           appetite endeavor she judgment interest the met. For she surrounded
-          motionless fat resolution may.
+          motionless fat resolution may. */}
+          I merge a passion for usability and user experience with technical
+          knowledge to create cool digital experiences. My repertoire includes
+          programming languages and tools such as ReactJS, React Hooks,
+          JavaScript, HTML, CSS, Java, MySQL, Spring Boot, Spring Cloud, Spring
+          Security, JWT, Docker, Bootstrap, Material Ui, jQuery, and more.
         </Typography>
       </div>
 

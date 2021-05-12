@@ -72,14 +72,15 @@ export const Contact = () => {
             id="message"
             name="message"
           />
-          <Button
+          <button
+            className="btn"
             color="primary"
             variant="contained"
             type="submit"
             disabled={state.submitting}
           >
             Send
-          </Button>
+          </button>
         </form>
       </Container>
     </Paper>

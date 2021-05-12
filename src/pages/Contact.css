@@ -15,3 +15,15 @@
   justify-content: center;
   padding: 40px 0;
 }
+.btn {
+  color: #fff;
+  background: #ffc500;
+  padding: 10px 15px;
+  border-radius: 16px;
+  border: none;
+  margin: 40px 0 20px 0;
+  cursor: pointer;
+}
+.btn i {
+  margin-left: 5px;
+}
