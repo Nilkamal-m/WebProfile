@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Nilkamal-m.github.io/",
+  "homepage": "https://Nilkamal-m.github.io/WebProfile",
   "name": "cv",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +14,6 @@
     "@testing-library/user-event": "^12.6.2",
     "bootstrap": "^5.0.0",
     "file-saver": "^2.0.5",
-    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
@@ -24,7 +23,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,5 +47,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
