@@ -5,7 +5,7 @@ import {
   TextField,
   Typography,
 } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import "./Contact.css";
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,6 +23,39 @@ const useStyles = makeStyles((theme) => ({
 export const Contact = () => {
   const classes = useStyles();
   const [state, handleSubmit] = useForm("mwkalpga");
+
+  // Single state object for all form fields
+  const [formData, setFormData] = useState({
+    fullname: '',
+    email: '',
+    message: ''
+  });
+
+  // Handle input changes for all fields dynamically
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData(prevFormData => ({
+      ...prevFormData, // Keep existing form data
+      [name]: value // Update the specific field by its name
+    }));
+  };
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setFormData({ // Reset formData to initial empty state
+        fullname: '',
+        email: '',
+        message: ''
+      });
+      // Optionally, show a success message that disappears after some time
+      // For instance, a simple way to clear the alert after 3 seconds:
+      // const timer = setTimeout(() => {
+      //   // Assuming Formspree state doesn't persist, or you might need to manually clear it
+      //   // For a persistent success message, you'd manage a separate `showAlert` state.
+      // }, 3000);
+      // return () => clearTimeout(timer);
+    }
+  }, [state.succeeded]);
 
   return (
     <Paper>
@@ -48,6 +81,8 @@ export const Contact = () => {
             id="fullname"
             name="fullname"
             required
+            value={formData.fullname}
+            onChange={handleInputChange}
           />
           <TextField
             label="Email"
@@ -59,6 +94,8 @@ export const Contact = () => {
             type="email"
             name="email"
             required
+            value={formData.email}
+            onChange={handleInputChange}
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <TextField
@@ -71,6 +108,8 @@ export const Contact = () => {
             style={{ marginBottom: "30px" }}
             id="message"
             name="message"
+            value={formData.message}
+            onChange={handleInputChange}
           />
           <button
             className="btn"
